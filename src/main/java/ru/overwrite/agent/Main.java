@@ -16,7 +16,7 @@ import java.util.*;
  *
  * <p><b>Базовое использование:</b></p>
  * <pre>
- *   java -javaagent:/path/to/agent-1.0.jar -jar myapp.jar
+ *   java -javaagent:/path/to/debug-agent-1.0.jar -jar myapp.jar
  * </pre>
  *
  * <p><b>Аргументы агента:</b></p>

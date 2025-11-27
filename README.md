@@ -6,7 +6,7 @@
 
 ## Базовое использование
 
-`java -javaagent:/path/to/agent-1.0.jar -jar myapp.jar`
+`java -javaagent:/path/to/debug-agent-1.0.jar -jar myapp.jar`
 
 ---
 
