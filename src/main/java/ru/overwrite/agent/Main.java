@@ -231,7 +231,7 @@ public final class Main {
             return String.valueOf(o);
         }
 
-        // I hate this... java 25 can fix this, but not a single person uses it :'(
+        // I hate this... java 21 can fix this, but not a single person uses it :'(
         if (o instanceof Object[]) {
             return Arrays.deepToString((Object[]) o);
         }
