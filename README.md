@@ -32,8 +32,8 @@
 
 ### Вывод в консоль
 
--DdebugAgent.printToConsole=true  # включить вывод в консоль  
--DdebugAgent.printToConsole=false # отключить вывод в консоль
+-DdebugAgent.printToConsole=true - включить вывод в консоль  
+-DdebugAgent.printToConsole=false - отключить вывод в консоль
 
 ### Вывод в файл
 
