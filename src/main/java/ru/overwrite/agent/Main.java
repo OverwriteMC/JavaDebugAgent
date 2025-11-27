@@ -29,8 +29,8 @@ import java.util.*;
  *   &lt;ClassSimpleName&gt;:&lt;method1&gt;|&lt;method2&gt;|&lt;method3&gt;,
  *   &lt;AnotherClass&gt;:&lt;methodX&gt;
  * </pre>
- * - ClassSimpleName — имя класса без пакета (например, PlayerList).  
- * - method1, method2, … — имена методов для патчинга (можно разделять | или +).  
+ * - ClassSimpleName — имя класса без пакета (например, PlayerList).
+ * - method1, method2, … — имена методов для патчинга (можно разделять | или +).
  * - Несколько классов разделяются запятой.
  *
  * <p><b>Пример:</b></p>
@@ -55,7 +55,7 @@ import java.util.*;
  * </ul>
  *
  * <p>По умолчанию агент патчит метод <code>PlayerList:addOp|op</code>, если аргументы не переданы.</p>
- * 
+ *
  * <p>Красивое описание by chatgpt.
  */
 public final class Main {
@@ -125,7 +125,7 @@ public final class Main {
                 System.err.println("[DEBUG-AGENT] invalid target pair (empty parts) (skip): " + trimmed);
                 continue;
             }
-            
+
             String[] methodNames = methodsPart.split("[|+]");
             Set<String> methodSet = TARGETS.computeIfAbsent(classSimpleName, k -> new HashSet<>());
 
@@ -148,7 +148,7 @@ public final class Main {
 
         TARGETS.put("PlayerList", methods);
     }
-    
+
     private static boolean isCandidateClass(String className) {
         if (className == null) {
             return false;
@@ -231,33 +231,32 @@ public final class Main {
             return String.valueOf(o);
         }
 
-        // I hate this... java 21 can fix this, but not a single person uses it :'(
-        if (o instanceof Object[]) {
-            return Arrays.deepToString((Object[]) o);
+        if (o instanceof Object[] array) {
+            return Arrays.deepToString(array);
         }
-        if (o instanceof int[]) {
-            return Arrays.toString((int[]) o);
+        if (o instanceof int[] array) {
+            return Arrays.toString(array);
         }
-        if (o instanceof long[]) {
-            return Arrays.toString((long[]) o);
+        if (o instanceof long[] array) {
+            return Arrays.toString(array);
         }
-        if (o instanceof short[]) {
-            return Arrays.toString((short[]) o);
+        if (o instanceof short[] array) {
+            return Arrays.toString(array);
         }
-        if (o instanceof byte[]) {
-            return Arrays.toString((byte[]) o);
+        if (o instanceof byte[] array) {
+            return Arrays.toString(array);
         }
-        if (o instanceof char[]) {
-            return Arrays.toString((char[]) o);
+        if (o instanceof char[] array) {
+            return Arrays.toString(array);
         }
-        if (o instanceof boolean[]) {
-            return Arrays.toString((boolean[]) o);
+        if (o instanceof boolean[] array) {
+            return Arrays.toString(array);
         }
-        if (o instanceof float[]) {
-            return Arrays.toString((float[]) o);
+        if (o instanceof float[] array) {
+            return Arrays.toString(array);
         }
-        if (o instanceof double[]) {
-            return Arrays.toString((double[]) o);
+        if (o instanceof double[] array) {
+            return Arrays.toString(array);
         }
 
         return String.valueOf(o);
